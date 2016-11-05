@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Members Area
+  p Welcome to your dashboard #{user.name}.
+  .panel.panel-default
+      // Default panel contents
+      .panel-heading List of users in Database
+      // Table
+      table.table
+        tr
+          th Name
+          th Email
+          th Username
+        each item, i in ListOfUsers
+          tr
+            td #{item.name }
+            td #{item.email}
+            td #{item.username}
